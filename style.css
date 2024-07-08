@@ -1,0 +1,312 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
+}
+
+@font-face{
+    font-family: cardo;
+    src: url("fonts/cardo-regular.woff");
+}
+
+@media screen and (min-width: 320px) {
+    header {
+        width: 100vw;
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        opacity: .8;
+        background-image: url('img/fondHeader.jpg');
+        size: cover;
+    }
+
+    h1 {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-size: 5vh;
+        font-weight: 700;
+        margin-top: 6.8rem;
+        letter-spacing: .5rem;
+        color: red;
+    }
+
+    main {
+        width: 100vw;
+        height: 75vh;
+        background-image: url(img/fond320.png);
+    }
+
+    main #ctn {
+        width: 90vw;
+        height: 98%;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+
+    main #ctn #states {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 2rem;
+    }
+
+    main #ctn #states .score {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        
+        #piece {
+            border-radius: 50%;
+        }
+
+        #score {
+            width: 4rem;
+            height: 1.7rem;
+            padding-top: 5%;
+            margin-left: 10px;
+            text-align: center;
+            background-color: antiquewhite;
+            opacity: 65%;
+            border-radius: 5px;
+            font-size: 2vh;
+        }
+    }    
+
+    main #ctn #states #timer {
+        width: 4rem;
+        height: 1.7rem;
+        border: 1px solid #615c5c;
+        border-radius: 5px;
+        margin: 15px 0;
+        background-color: antiquewhite;
+        opacity: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        font-size: 2vh;
+    }
+
+    main #ctn #wins {
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        margin-bottom: 20px;
+        
+        #titleWins {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            color: rgb(219, 188, 8);
+            font-size: 3.2vh;
+            font-weight: 700;
+            font-family: cardo;
+            letter-spacing: 2px;
+        }
+
+        #amountWins {
+            width: 40%;
+            padding: 1.5%;
+            margin: auto 5px;  
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 1px solid #615c5c;
+            border-radius: 5px;
+            margin: 15px 0;
+            background-color: antiquewhite;
+            opacity: 65%;
+            font-size: 2vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    main #ctn #machine {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 30vh;
+        border: 2px solid #949c6e;
+        border-radius: 5px;
+        padding: 5%;
+    }
+
+    main #ctn #machine #screen {
+        width: 80%;
+        height: 80%;
+        border: 3px solid goldenrod;
+        border-radius: 5%;
+        display: flex;
+
+        #cln1, #cln2, #cln3 {
+            width: 65px;
+            background: #cfc5c528;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 40px;
+                height: 60px;
+            }
+        }
+    
+        #cln1, #cln2 {
+            border-right: 2px solid goldenrod ;
+        }
+    }
+
+    main #ctn #machine #tours {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 20%;
+        background: antiquewhite;
+        opacity: 85%;
+        border: 2px solid #949c6e;
+        border-radius: 7px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-top: 15px;
+
+        .tours {
+            width: 100%;
+            height: 60%;
+            margin: auto 0;
+            padding: 2%;  
+            font-size: 2vh;
+            font-weight: 900;
+            text-align: center;
+        }
+    }    
+
+    #btn {
+        width: 100%;
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        #play {
+            height: 40%;
+            width: 30%;
+            margin: .2rem .1rem;
+            background-color: rgba(165, 194, 165, 0.637);
+            font-size: 2.2vh;
+            font-weight: 900;
+        }
+
+        #record {
+            height: 40%;
+            width: 70%;
+            background-color: rgba(165, 194, 165, 0.637);
+            margin-top: .2rem;
+            color: rgb(126, 3, 3);
+            border: 2px solid rgb(126, 3, 3);
+            font-size: 1.5vh;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {   
+
+    #bouleScore, #timer, .gains, .tours {
+        width: 70px;
+        height: 20px;
+    } 
+}
+
+@media screen and (min-width : 370px) {
+    main {
+        background-position-x: -40px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    #titre {
+        background-image: url('img/fondHeader425.jpg');
+        background-position-y: -5px;
+    }
+
+    main {
+        background-image: url(img/fond425.jpg);
+    }
+}
+
+@media screen and (min-width: 425px) {
+    main {
+        background-image: url(img/fond450.jpg);
+        background-position-y: -150px;
+    }
+
+    #bouleScore, #timer, .gains, .tours {
+        width: 90px;
+        height: 25px;
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .nbGains, #gains {
+        height: 55px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+     #titre {
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    .boo {
+        display: inline;
+        margin-left: -5px;
+    }
+
+    .h1 {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 5.5rem;
+    }
+    .babidi {
+        margin-left: -20px;
+    }
+
+    .booMince {
+        display: inline;
+    }
+
+    main {
+        background-image: url(img/fond1024.jpg);
+        background-size: 96%;
+        background-position: center;
+        background-position-y: -450px;
+    }
+}
+
