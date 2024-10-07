@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body {
+.body {
     font-size: 62.5%;
     width: 100vw;
     height: 100vh;
@@ -16,16 +16,16 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-    header {
+    .body__header {
         width: 100vw;
         height: 25vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #000;
         opacity: .8;
         background-image: url('img/fondHeader.jpg');
         size: cover;
+        background-position: center;
     }
 
     h1 {
@@ -33,28 +33,29 @@ body {
         height: 10vh;
         display: flex;
         justify-content: center;
-        align-items: end;
-        font-size: 5vh;
-        font-weight: 700;
-        margin-top: 6.8rem;
+        align-items: center;
+        font-size: 16vw;
+        font-weight: 900;
         letter-spacing: .5rem;
         color: red;
     }
 
-    main {
+    .body__main {
         width: 100vw;
         height: 75vh;
         background-image: url(img/fond320.png);
+        background-position: center;
+        background-size: cover;
     }
 
-    main #ctn {
+    .body__main--ctn {
         width: 90vw;
         height: 98%;
         margin: 0 auto;
         padding: 1rem 0;
     }
 
-    main #ctn #states {
+    .body__main--ctn-states {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -63,29 +64,29 @@ body {
         margin-bottom: 2rem;
     }
 
-    main #ctn #states .score {
+    .body__main--ctn-states-score {
         display: flex;
         justify-content: start;
         align-items: center;
         
-        #piece {
+        .body__main--ctn-states-score-img {
             border-radius: 50%;
         }
 
-        #score {
+        .body__main--ctn-states-score-solde {
             width: 4rem;
             height: 1.7rem;
-            padding-top: 5%;
+            padding-top: .5%;
             margin-left: 10px;
             text-align: center;
             background-color: antiquewhite;
             opacity: 65%;
             border-radius: 5px;
-            font-size: 2vh;
+            font-size: 7vw;
         }
     }    
 
-    main #ctn #states #timer {
+    .body__main--ctn-states-timer {
         width: 4rem;
         height: 1.7rem;
         border: 1px solid #615c5c;
@@ -100,7 +101,7 @@ body {
         font-size: 2vh;
     }
 
-    main #ctn #wins {
+    .body__main--ctn-wins {
         width: 100%;
         height: 7vh;
         display: flex;
@@ -109,7 +110,7 @@ body {
         align-items: center;        
         margin-bottom: 20px;
         
-        #titleWins {
+        .body__main--ctn-titleWins {
             width: 100%;
             height: 50%;
             text-align: center;
@@ -120,7 +121,7 @@ body {
             letter-spacing: 2px;
         }
 
-        #amountWins {
+        .body__main--ctn-amountWins {
             width: 40%;
             padding: 1.5%;
             margin: auto 5px;  
@@ -138,7 +139,7 @@ body {
         }
     }
 
-    main #ctn #machine {
+    .body__main--ctn-machine {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -149,32 +150,33 @@ body {
         padding: 5%;
     }
 
-    main #ctn #machine #screen {
-        width: 80%;
-        height: 80%;
+    .body__main--ctn-machine-screen {
+        width: 90%;
+        height: 99%;
         border: 3px solid goldenrod;
         border-radius: 5%;
         display: flex;
 
-        #cln1, #cln2, #cln3 {
-            width: 65px;
+        .body__main--ctn-machine-screen-clns {
+            width: 33%;
             background: #cfc5c528;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            img {
-                width: 40px;
-                height: 60px;
+            .body__main--ctn-machine-screen-clns-img {
+                width: 80%;
+                height: auto;
             }
         }
     
-        #cln1, #cln2 {
-            border-right: 2px solid goldenrod ;
+        #cln2 {
+            border-right: 2px solid goldenrod;
+            border-left: 2px solid goldenrod;
         }
     }
 
-    main #ctn #machine #tours {
+    .body__main--ctn-machine-tours {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -188,7 +190,7 @@ body {
         font-weight: 700;
         margin-top: 15px;
 
-        .tours {
+        .body__main--ctn-machine-nbTours {
             width: 100%;
             height: 60%;
             margin: auto 0;
@@ -199,7 +201,7 @@ body {
         }
     }    
 
-    #btn {
+    .body__main--ctn-btns {
         width: 100%;
         height: 12vh;
         display: flex;
@@ -208,7 +210,7 @@ body {
         justify-content: space-between;
         margin-top: 25px;
 
-        #play {
+        .body__main--ctn-btns-play {
             height: 40%;
             width: 30%;
             margin: .2rem .1rem;
@@ -217,7 +219,7 @@ body {
             font-weight: 900;
         }
 
-        #record {
+        .body__main--ctn-btns-record {
             height: 40%;
             width: 70%;
             background-color: rgba(165, 194, 165, 0.637);

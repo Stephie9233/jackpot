@@ -6,42 +6,45 @@
     <link rel="stylesheet" href="style.css">
     <title>Jackpot</title>
 </head>
-<body>
-    <header>
+<body class="body">
+    <header class="body__header">
         <h1>JACKPOT</h1>
     </header>
     
-    <main>
-        <section id="ctn">
-            <section id="states">
-                <article class="score">
-                    <img src="img/piece30.png" alt="Boule Dragon Ball" id="piece">
-                    <h3 id="score"></h3>
+    <main class="body__main">
+        <section class="body__main--ctn">
+            <section class="body__main--ctn-states">
+                <article class="body__main--ctn-states-score">
+                    <img src="img/piece30.png" alt="Boule Dragon Ball" class="body__main--ctn-states-score-img">
+                    <h3 class="body__main--ctn-states-score-solde"></h3>
                 </article>
 
-                <h3 id="timer"></h3>
+                <h3 class="body__main--ctn-states-timer"></h3>
             </section>
             
-            <section id="wins">
-                <h2 id="titleWins">Gains</h2>
-                <h3 id="amountWins"></h3>
+            <section class="body__main--ctn-wins">
+                <h2 class="body__main--ctn-titleWins" id="titleWins">Gains</h2>
+                <h3 class="body__main--ctn-amountWins" id="amountWins"></h3>
             </section>
 
-            <section id="machine">
-                <article id="screen">
-                    <div id="cln1"><img src="" alt="" id="img1" class="image"></div>
-                    <div id="cln2"><img src="" alt="" id="img2" class="image"></div>
-                    <div id="cln3"><img src="" alt="" id="img3" class="image"></img>
+            <section class="body__main--ctn-machine" id="machine">
+                <article class="body__main--ctn-machine-screen" id="screen">
+                    <div class="body__main--ctn-machine-screen-clns" id="cln1">
+                        <img src="" alt="" id="img1" class="body__main--ctn-machine-screen-clns-img"></div>
+                    <div class="body__main--ctn-machine-screen-clns" id="cln2">
+                        <img src="" alt="" id="img2" class="body__main--ctn-machine-screen-clns-img"></div>
+                    <div class="body__main--ctn-machine-screen-clns" id="cln3">
+                        <img src="" alt="" id="img3" class="body__main--ctn-machine-screen-clns-img"></img>
                 </article>
 
-                <article id="tours">
-                    <h3 class="tours"></h3>
+                <article class="body__main--ctn-machine-tours" id="tours">
+                    <h3 class="body__main--ctn-machine-nbTours"></h3>
                 </article>                
             </section>
 
-            <section id="btn">
-                    <button type="button" id="play">Joue</button>
-                    <button type="button" id="record">enregistre ta progression</button>
+            <section class="body__main--ctn-btns" id="btn">
+                    <button type="button" class="body__main--ctn-btns-play" id="play">Joue</button>
+                    <button type="button" class="body__main--ctn-btns-record" id="record">enregistre ta progression</button>
             </section>
         </section>
     </main>
