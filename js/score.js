@@ -20,8 +20,6 @@ function afficheScore() {
     bouleScore.innerText = (`${score}`);
     if(score === 0) {
         bouleScore.innerText = (`${score}00`); 
-    } else if(score >= 100 && score < 1000) {
-        bouleScore.innerText = (`${score}0`);
     }
 }
 
