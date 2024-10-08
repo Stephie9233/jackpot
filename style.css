@@ -24,8 +24,9 @@
         align-items: center;
         opacity: .8;
         background-image: url('img/fondHeader.jpg');
-        size: cover;
+        background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     h1 {
@@ -71,18 +72,20 @@
         
         .body__main--ctn-states-score-img {
             border-radius: 50%;
+            
         }
 
         .body__main--ctn-states-score-solde {
             width: 4rem;
             height: 1.7rem;
-            padding-top: .5%;
-            margin-left: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: antiquewhite;
             opacity: 65%;
             border-radius: 5px;
-            font-size: 7vw;
+            font-size: 5vw;
+            margin-left: 10px;
         }
     }    
 
@@ -233,52 +236,12 @@
     }
 }
 
-@media screen and (min-width: 320px) {   
-
-    #bouleScore, #timer, .gains, .tours {
-        width: 70px;
-        height: 20px;
-    } 
-}
-
-@media screen and (min-width : 370px) {
-    main {
-        background-position-x: -40px;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    #titre {
-        background-image: url('img/fondHeader425.jpg');
-        background-position-y: -5px;
-    }
-
-    main {
-        background-image: url(img/fond425.jpg);
-    }
-}
-
 @media screen and (min-width: 425px) {
-    main {
-        background-image: url(img/fond450.jpg);
-        background-position-y: -150px;
-    }
 
-    #bouleScore, #timer, .gains, .tours {
-        width: 90px;
-        height: 25px;
-        font-size: 1.3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } 
 
-    .nbGains, #gains {
-        height: 55px;
-    }
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
      #titre {
         background-repeat: no-repeat;
         background-position: 50%;
@@ -311,4 +274,4 @@
         background-position-y: -450px;
     }
 }
-
+ */
