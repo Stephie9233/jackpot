@@ -1,4 +1,4 @@
-const wins = document.querySelector('#wins')
+//const wins = document.querySelector('#wins')
 
 let dice;
 let montant;
@@ -8,9 +8,9 @@ let third;
 
 
 function manche() {
-    first = displaySet(cln1, img1)
-    second = displaySet(cln2, img2)
-    third = displaySet(cln3, img3)
+    first = displayAvatar(cln1, img1)
+    second = displayAvatar(cln2, img2)
+    third = displayAvatar(cln3, img3)
     compter()
   } 
 
@@ -19,22 +19,22 @@ function compter() {
     if(first === second && second === third) {
         switch(first) {
             case 1 :
-                montant = 6000
+                montant = 16000
                 break;
             case 2 :
-                montant = 5000
+                montant = 15000
                 break;
             case 3 :
-                montant = 4000
+                montant = 14000
                 break;
             case 4 :
-                montant = 3000
+                montant = 13000
                 break;
             case 5 :
-                montant = 2000;
+                montant = 12000;
                 break;
             case 6 : 
-                montant = 1000;
+                montant = 11000;
                 break;
         }
     } else if(first === second || second === third || first === third) {

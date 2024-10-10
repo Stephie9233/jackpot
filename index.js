@@ -1,9 +1,34 @@
+function load(prop, value, dom) {
+    let local = localStorage.getItem(`${prop}`)
+    console.log(local);
+    
+    if(local === null) {
+        prop = value
+        dom.innerText = `${prop}0`
+        localStorage.setItem(`${prop}`, prop)
+        return prop;
+    } else {        
+        prop = JSON.parse(localStorage.getItem(`${prop}`))
+        console.log(prop);
+        
+        (prop === 0) ? 
+        dom.innerText = `${prop}0`: dom.innerText = `${prop}`;
+        return prop;
+    }
+}
+
+
+const score = {
+    bouleScore : document.querySelector("#score"),
+    solde : load(this.solde, 0, this.bouleScore),
+    
+   
+    
+}
+
 /***********************VARIABLES*******************************/
-/*SCORE*/
-//DOM
-const bouleScore = document.querySelector("#score");
-//DONNEES
-let score;
+
+
 
 // TOURS
 //DOM
@@ -38,19 +63,6 @@ const images = document.querySelectorAll('.image')
 //LOCALSTORAGE
 //SCORE
 /*On vérifie si le localStorage en contient déjà un en mémoire. Si non, on l'initialise à 0 dans localstorage, si oui, on récupère le score enregistré.*/
-function loadScore() {
-    let locScore = localStorage.getItem('score')
-    if(locScore === null) {
-        score = 0
-        afficheScore()
-        localStorage.setItem('score', score)
-        return score;
-    } else {        
-        score = JSON.parse(locScore)
-        afficheScore()
-        return score;
-    }
-}
 
 //TOURS
 function loadTours() {
@@ -131,12 +143,12 @@ function afficheTemps(minutes, secondes) {
 /**************************SCRIPT*******************************/
 //Au chargement de la page, on vérifie le local storage. S'il est vide, on y inscrit les données par défaut. S'il est déjà rempli, on récupère les données et les affiche.
 window.addEventListener('DOMContentLoaded', () => {
-    loadScore()
+    //loadScore()
     // afficheScore()
-    loadTemps()
-    loadTours()
+    //loadTemps()
+    //loadTours()
     //rebours()
-    afficheTemps(minutes, secondes)
+    //afficheTemps(minutes, secondes)
     amountWins.innerText = '000';
     
     displayScreen(cln1, img1)
