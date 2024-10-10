@@ -1,1 +1,0 @@
-const amountWins = document.querySelector('#amountWins')
