@@ -1,3 +1,5 @@
+
+
 const score = {
     bouleScore : document.querySelector("#score"),
     amountWins : document.querySelector("#amountWins"),
@@ -112,12 +114,14 @@ const timer = {
     },
 
     afficheTemps(minutes, secondes) {
-        if(secondes < 10 && secondes >= 0) {
+        this.chrono.innerText = (`${minutes} : ${secondes}`);
+        if(secondes < 10) {
             this.chrono.innerText = (`${minutes} : 0${secondes}`);
-        } else if(minutes < 10 && minutes >= 0) {
+            if(minutes < 10) {
+                this.chrono.innerText = (`0${minutes} : 0${secondes}`);
+            }
+        } else if(minutes < 10) {
             this.chrono.innerText = (`0${minutes} : ${secondes}`);
-        } else {
-            this.chrono.innerText = (`${minutes} : ${secondes}`);
         }
     },
 
